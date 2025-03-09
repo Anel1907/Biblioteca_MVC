@@ -34,5 +34,5 @@ Controlador:
     <li>Llama a los métodos del modelo y actualiza la vista.</li>
 </ul>
 
-![Modelo MVC](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freecodecamp.org%2Fespanol%2Fnews%2Fel-modelo-de-arquitectura-view-controller-pattern%2F&psig=AOvVaw0v6aOTeqL_Ssidy3lHpi8o&ust=1741648122712000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCPDg_P6O_osDFQAAAAAdAAAAABAE)
+![Modelo MVC](https://www.freecodecamp.org/espanol/news/content/images/size/w2000/2021/06/BG4.png)
 
