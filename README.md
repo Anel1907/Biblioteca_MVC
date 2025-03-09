@@ -34,5 +34,5 @@ Controlador:
     <li>Llama a los métodos del modelo y actualiza la vista.</li>
 </ul>
 
-![Modelo MVC](https://www.freecodecamp.org/espanol/news/content/images/size/w2000/2021/06/BG4.png)
+![Modelo MVC](https://www.freecodecamp.org/espanol/news/content/images/size/w1600/2021/06/MVC3.png)
 
