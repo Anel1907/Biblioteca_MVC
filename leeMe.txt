@@ -1,0 +1,113 @@
+leeMe.txt CapasRecordSet muestra la organización de una arquitectura por capas.
+			Arquitectura Modelo-Vista-Controlador
+			Renderiza en lista o tabla un RecordSet de datos de una tabla en base de datos.
+   		
+Descripción.
+	Muestra como organizar una aplicación web en carpeta-raiz para:
+	
+		/app: contiene conjunto de carpetas destinadas al soporte de la aplicación, sólo para el desarrollador.
+		/public: contiene carpetas destinadas al consumo de datos para el usuario.
+		.htacces archivo de texto; contiene script para ser interpretado por el servidor, el script conduce la
+		ejecución de la navegación.
+
+	Muestra como implementar y organizar en capetas una arquitectura por capas.
+	
+	CapasRecordSet
+	  /app
+		├─controladores
+		├─libs
+		├─modelos
+		├─vistas
+		├─.htaccess
+		└─inicio.php
+		
+	Donde:
+		
+		  Carpeta 		    Capa						Descripción
+		  
+		controladores	 Controlador 		Contiene es la clase que toda clase debe tener un index.
+											Gestiona el transito de datos entre el modelo principal y la vista principal.
+		
+		modelos			 Modelo				Gestiona una interfaz para el RecordSet.						
+		
+		vistas			 Vista				Renderiza en una UI del navegador, el RecorSet de la petición URL por omisión.
+		
+		/app							
+		└─.htaccess							Configura/conduce el acceso/disponibilidad de recursos en directorio app/ 
+		
+		libs								Contiene archivos de soporte para la gestion de comunicacniones entre capas
+		├─Contol.php						Define al controlador por omisión. Desgloza la url.						
+		├─Controlador.php					Contiene a metodos para fabricar modelos y vistas 
+		└─MySQLdb.php					    Contiene la interfaz para gestionar bd, retorna un RecordSet. 
+		
+		/app							
+		└─inicio.php						Cargar clases en memoria de trabajo.
+		
+Actualización.
+
+	Debe ser actualizada la ruta de ejecución del archivo public/.htaccess con:  
+		
+			/app/.htaccess 
+                    └─ RewriteBase 		xammp/htdocs/BiblitecaMVC/public
+				
+	Debe ser creada la base de datos, en le gestor phpMyAdmin: 
+	Base de datos:
+			libreria 
+	
+	importar archivo:
+	phpMyAdmin
+	  ░ libreria
+	  ├─nueva
+	  └─libros.sql
+			├─Columnas
+			└─índices
+			
+	Actualizar path en el archivo: defineConstantes.php
+	con la ruta de la: i) carpeta del proyecto, ii) aplicacion.
+		xammp/htdocs/BiblitecaMVC/ 
+
+
+Ejecución.
+
+	Desde:
+		xammp/htdocs/BiblitecaMVC/ 
+	
+	Abrir en barra de navegación:
+	
+		http://localhost/Biblioteca_MVC/public/index.php/dosLibros
+
+		Referencias.
+		
+Cómo crear un Front Controller en PHP (2017, 26 de septiembre). 
+	El Baúl del Programador. 
+	Disponible de https://elbauldelprogramador.com/como-crear-un-front-controller-en-php/
+
+MVC en PHP y MySQL: Modelo Vista Controlador
+    J. Luis. (2018, 19 de diciembre). Codea App. 
+	Disponible de https://codea.app/blog/mvc-en-php
+
+Modelo Vista Controlador (MVC) en PHP [Actualizado 2022]
+    Adaweb. (2022, 10 de febrero). Adaweb. 
+	Disponible de https://www.adaweb.es/modelo-vista-controlador-mvc-en-php-actualizado-2022/
+
+Objeto Recordset (DAO)
+	Disponible en:https://learn.microsoft.com/es-es/office/client-developer/access/desktop-database-reference/recordset-object-dao
+	Consultado: 21Julio24
+	
+Funcionalidad Básica de Apache	
+	Disponible en:https://httpd.apache.org/docs/trunk/es/mod/core.html#options
+	Consultado: 21Julio24.
+
+ASCII table , ascii codes.	
+	Disponible en:https://theasciicode.com.ar/#google_vignette	
+	Consultado: 21Julio24.
+	
+Arce Anguiano Francisco Javier.
+Crear un patrón MVC con php y MySQL.
+	Disponible:https://www.udemy.com/course/crear-un-patron-mvc-con-php-y-mysql/
+	Consultado:11julio24.
+	
+Guía para escribir documentos HTML Versión 1.8.21
+Ejemplos de tablas
+	Disponible:https://www.uv.es/jac/guia/tablaeje.htm
+	Consultado: 21Julio24.
